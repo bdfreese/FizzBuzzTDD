@@ -29,15 +29,53 @@ class FizzBuzzTDDTests: XCTestCase {
         XCTAssertNotNil(viewController)
     }
     
-    func testStringForNumber() {
-        var string = viewController?.stringForNumber(1)
+    func testStringForNumbers() {
+        
+    }
+    
+//    func testStringForNumber(i: Int) {
+////        var string = viewController?.stringForNumber(1)
+//        testStringForNumber1()
+//        testStringForNumber3()
+//        testStringForNumber5()
+//        testStringForNumber15()
+//    }
+    
+    func testStringForNumber1() {
+        let string = viewController?.stringForNumber(1)
         XCTAssertEqual(string, "1")
-        string = viewController?.stringForNumber(3)
+    }
+    
+    func testStringForNumber3() {
+        let string = viewController?.stringForNumber(3)
         XCTAssertEqual(string, "Fizz")
-        string = viewController?.stringForNumber(5)
+    }
+    
+    func testStringForNumber5() {
+        let string = viewController?.stringForNumber(5)
         XCTAssertEqual(string, "Buzz")
-        string = viewController?.stringForNumber(15)
+    }
+    
+    func testStringForNumber15() {
+        let string = viewController?.stringForNumber(15)
         XCTAssertEqual(string, "FizzBuzz")
+    }
+    
+    func testStringForNegative1() {
+        let string = viewController?.stringForNumber(-1)
+        XCTAssertEqual(string, "-1")
+    }
+    
+    func testStringForMax() {
+        let string = viewController?.stringForNumber(Int.max)
+        print("\(Int.max)")
+        XCTAssertEqual(string, "\(Int.max)")
+    }
+    
+    func testStringForMin() {
+        let string = viewController?.stringForNumber(Int.min)
+        print("\(Int.min)")
+        XCTAssertEqual(string, "\(Int.min)")
     }
     
     func testPerformanceExample() {
